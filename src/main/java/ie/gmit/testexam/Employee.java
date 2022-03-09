@@ -28,5 +28,4 @@ public class Employee {
             throw new IllegalArgumentException("Invalid Title");
         }
     }
-
 }
