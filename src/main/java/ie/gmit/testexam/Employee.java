@@ -21,7 +21,7 @@ public class Employee {
     }
 
     public void setTitle(String title) {
-        if(title == "Mr" || title == "Mrs" || title == "Ms") {
+        if(title == "Mr" || title == "Mrs" || title == "Miss") {
             this.title = title;
         }
         else {
@@ -34,7 +34,7 @@ public class Employee {
     }
 
     public void setName(String name) {
-        if(name.length() > 3) {
+        if(name.length() >= 5 && name.length() <= 22) {
             this.name = name;
         }
         else {
@@ -47,7 +47,12 @@ public class Employee {
     }
 
     public void setPps(String pps) {
-        this.pps = pps;
+        if(pps.length() == 8) {
+            this.pps = pps;
+        }
+        else {
+            throw new IllegalArgumentException("Invalid PPS Number");
+        }
     }
 
     public String getType() {
