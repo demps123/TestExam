@@ -10,10 +10,10 @@ public class Employee {
 
 <span class="fc" id="L11">    public Employee(String title, String name, String pps, String type, int age) {</span>
 <span class="fc" id="L12">        setTitle(title);</span>
-<span class="fc" id="L13">        this.name = name;</span>
-<span class="fc" id="L14">        this.pps = pps;</span>
-<span class="fc" id="L15">        this.type = type;</span>
-<span class="fc" id="L16">        this.age = age;</span>
+<span class="fc" id="L13">        setName(name);</span>
+<span class="fc" id="L14">        setPps(pps);</span>
+<span class="fc" id="L15">        setType(type);</span>
+<span class="fc" id="L16">        setAge(age);</span>
 <span class="fc" id="L17">    }</span>
 
     public String getTitle() {
@@ -28,6 +28,43 @@ public class Employee {
 <span class="fc" id="L28">            throw new IllegalArgumentException(&quot;Invalid Title&quot;);</span>
         }
 <span class="fc" id="L30">    }</span>
+
+    public String getName() {
+<span class="fc" id="L33">        return name;</span>
+    }
+
+    public void setName(String name) {
+<span class="fc bfc" id="L37" title="All 2 branches covered.">        if(name.length() &gt; 3) {</span>
+<span class="fc" id="L38">            this.name = name;</span>
+        }
+        else {
+<span class="fc" id="L41">            throw new IllegalArgumentException(&quot;Name provided is not valid&quot;);</span>
+        }
+<span class="fc" id="L43">    }</span>
+
+    public String getPps() {
+<span class="nc" id="L46">        return pps;</span>
+    }
+
+    public void setPps(String pps) {
+<span class="fc" id="L50">        this.pps = pps;</span>
+<span class="fc" id="L51">    }</span>
+
+    public String getType() {
+<span class="nc" id="L54">        return type;</span>
+    }
+
+    public void setType(String type) {
+<span class="fc" id="L58">        this.type = type;</span>
+<span class="fc" id="L59">    }</span>
+
+    public int getAge() {
+<span class="nc" id="L62">        return age;</span>
+    }
+
+    public void setAge(int age) {
+<span class="fc" id="L66">        this.age = age;</span>
+<span class="fc" id="L67">    }</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
