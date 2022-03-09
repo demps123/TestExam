@@ -2,33 +2,32 @@
 
 public class Employee {
 
-
     String title;
     String name;
     String pps;
     String type;
     int age;
 
-<span class="fc" id="L12">    public Employee(String title, String name, String pps, String type, int age) {</span>
-<span class="fc" id="L13">        this.title = title;</span>
-<span class="fc" id="L14">        this.name = name;</span>
-<span class="fc" id="L15">        this.pps = pps;</span>
-<span class="fc" id="L16">        this.type = type;</span>
-<span class="fc" id="L17">        this.age = age;</span>
-<span class="fc" id="L18">    }</span>
+<span class="fc" id="L11">    public Employee(String title, String name, String pps, String type, int age) {</span>
+<span class="fc" id="L12">        setTitle(title);</span>
+<span class="fc" id="L13">        this.name = name;</span>
+<span class="fc" id="L14">        this.pps = pps;</span>
+<span class="fc" id="L15">        this.type = type;</span>
+<span class="fc" id="L16">        this.age = age;</span>
+<span class="fc" id="L17">    }</span>
 
     public String getTitle() {
-<span class="fc" id="L21">        return title;</span>
+<span class="fc" id="L20">        return title;</span>
     }
 
     public void setTitle(String title) {
-<span class="nc bnc" id="L25" title="All 6 branches missed.">        if(title == &quot;Mr&quot; || title == &quot;Mrs&quot; || title == &quot;Ms&quot;) {</span>
-<span class="nc" id="L26">            this.title = title;</span>
+<span class="pc bpc" id="L24" title="2 of 6 branches missed.">        if(title == &quot;Mr&quot; || title == &quot;Mrs&quot; || title == &quot;Ms&quot;) {</span>
+<span class="fc" id="L25">            this.title = title;</span>
         }
         else {
-
+<span class="fc" id="L28">            throw new IllegalArgumentException(&quot;Invalid Title&quot;);</span>
         }
-<span class="nc" id="L31">    }</span>
+<span class="fc" id="L30">    }</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
