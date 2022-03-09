@@ -2,7 +2,6 @@ package ie.gmit.testexam;
 
 public class Employee {
 
-
     String title;
     String name;
     String pps;
@@ -10,7 +9,7 @@ public class Employee {
     int age;
 
     public Employee(String title, String name, String pps, String type, int age) {
-        this.title = title;
+        setTitle(title);
         this.name = name;
         this.pps = pps;
         this.type = type;
@@ -26,7 +25,7 @@ public class Employee {
             this.title = title;
         }
         else {
-
+            throw new IllegalArgumentException("Invalid Title");
         }
     }
 
